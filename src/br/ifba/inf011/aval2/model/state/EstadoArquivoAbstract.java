@@ -3,6 +3,7 @@ package br.ifba.inf011.aval2.model.state;
 import java.time.LocalDate;
 import java.util.List;
 
+import br.ifba.inf011.aval2.model.Arquivo;
 import br.ifba.inf011.aval2.model.Credencial;
 import br.ifba.inf011.aval2.model.Entrada;
 import br.ifba.inf011.aval2.model.EntradaOperavel;
@@ -10,9 +11,9 @@ import br.ifba.inf011.aval2.model.EntradaOperavel;
 /* */
 public abstract class EstadoArquivoAbstract implements EntradaOperavel{
 	
-	protected EntradaOperavel arquivo;
+	protected Arquivo arquivo;
 	
-	protected EstadoArquivoAbstract(EntradaOperavel arquivo) {
+	protected EstadoArquivoAbstract(Arquivo arquivo) {
 		this.arquivo = arquivo;
 	}
 	
@@ -20,7 +21,7 @@ public abstract class EstadoArquivoAbstract implements EntradaOperavel{
 		return arquivo;
 	}
 	
-	public void setArquivo(EntradaOperavel arquivo) {
+	public void setArquivo(Arquivo arquivo) {
 		this.arquivo = arquivo;
 	}
 		

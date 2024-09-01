@@ -48,17 +48,17 @@ public class Arquivo extends AbstractEntrada implements EntradaOperavel{
 
 	@Override
 	public Long getTamanho() throws IllegalAccessException{
-		return Long.valueOf(this.conteudo.length());
+		return state.getTamanho();
 	}
 	
 	@Override
 	public String ler(Credencial credencial) throws IllegalAccessException{
-		return this.conteudo;
+		return this.state.ler(credencial);
 	}
 
 	@Override
 	public void escrever(Credencial credencial, String conteudo) throws IllegalAccessException {
-		this.conteudo = conteudo; 
+		this.state.escrever(credencial, conteudo);
 	}
 
 	@Override
@@ -66,7 +66,7 @@ public class Arquivo extends AbstractEntrada implements EntradaOperavel{
 		return this.tipoCodificacao.encode(conteudo);
 	}
 
-	protected void setConteudo(String conteudo) {
+	public void setConteudo(String conteudo) {
 		this.conteudo = conteudo;
 	}
 	
@@ -74,5 +74,10 @@ public class Arquivo extends AbstractEntrada implements EntradaOperavel{
 		this.state = state;
 	}
 	
+	public String getConteudo() {
+	    return this.conteudo;
+	}
+	
+
 
 }
