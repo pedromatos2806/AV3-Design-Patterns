@@ -2,13 +2,8 @@ package br.ifba.inf011.aval2;
 
 import java.time.LocalDate;
 
-import br.ifba.inf011.aval2.model.Arquivo;
 import br.ifba.inf011.aval2.model.ArquivoHistorico;
-import br.ifba.inf011.aval2.model.ArquivoHistorico.ArquivoHistoricoMemento;
 import br.ifba.inf011.aval2.model.Credencial;
-import br.ifba.inf011.aval2.model.Entrada;
-import br.ifba.inf011.aval2.model.EntradaOperavel;
-import br.ifba.inf011.aval2.model.Pasta;
 import br.ifba.inf011.aval2.model.memento.Caretaker;
 
 public class App3 {
