@@ -1,22 +1,27 @@
 package br.ifba.inf011.aval2.model.state;
 
 import br.ifba.inf011.aval2.model.Credencial;
+import br.ifba.inf011.aval2.model.EntradaOperavel;
 
 public class Normal extends EstadoArquivoAbstract{
 
+	public Normal(EntradaOperavel arquivo) {
+		super(arquivo);
+	}
+
 	@Override
 	public String ler(Credencial credencial) throws IllegalAccessException {
-		return getArquivo().ler(credencial);
+		return arquivo.ler(credencial);
 	}
 
 	@Override
 	public void escrever(Credencial credencial, String escrever) throws IllegalAccessException {
-		getArquivo().escrever(credencial, escrever);
+		arquivo.escrever(credencial, escrever);
 	}
 
 	@Override
 	public Long getTamanho() throws IllegalAccessException {
-		return getArquivo().getTamanho();
+		return arquivo.getTamanho();
 	}
 
 }

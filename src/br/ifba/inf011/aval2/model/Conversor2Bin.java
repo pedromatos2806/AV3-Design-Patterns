@@ -2,7 +2,9 @@ package br.ifba.inf011.aval2.model;
 
 import java.text.DecimalFormat;
 
-public class Conversor2Bin {
+import br.ifba.inf011.aval2.model.brigde.TipoCodificacao;
+
+public class Conversor2Bin implements TipoCodificacao{
 	
 	public static int BIN_BLOCK_SIZE = 8;
 	
@@ -37,6 +39,18 @@ public class Conversor2Bin {
 	    Integer numPalavra = Integer.parseInt(binario, 2);
 	    String characters = Character.toString(numPalavra);
 		return characters.charAt(0);		
+	}
+
+
+	@Override
+	public String encode(String conteudo) {
+		return this.toBinary(conteudo);
+	}
+
+
+	@Override
+	public String decode(String conteudo) {
+		return this.toASCII(conteudo);
 	}	
 
 }

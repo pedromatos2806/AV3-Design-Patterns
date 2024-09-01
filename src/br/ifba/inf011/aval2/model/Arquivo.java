@@ -3,9 +3,11 @@ package br.ifba.inf011.aval2.model;
 import java.time.LocalDate;
 import java.util.List;
 
+import br.ifba.inf011.aval2.model.brigde.ConversorText;
 import br.ifba.inf011.aval2.model.brigde.TipoCodificacao;
 import br.ifba.inf011.aval2.model.composite.AbstractEntrada;
 import br.ifba.inf011.aval2.model.state.EstadoArquivoAbstract;
+import br.ifba.inf011.aval2.model.state.Normal;
 
 public class Arquivo extends AbstractEntrada implements EntradaOperavel{
 	
@@ -18,6 +20,15 @@ public class Arquivo extends AbstractEntrada implements EntradaOperavel{
 	public Arquivo(String nome, LocalDate dataCriacao, String conteudo) {
 		super(nome, dataCriacao);
 		this.conteudo =  conteudo;
+		this.tipoCodificacao = new ConversorText();
+		this.state = new Normal(this);
+	}
+	
+	public Arquivo(String nome, LocalDate dataCriacao, String conteudo,EstadoArquivoAbstract state, TipoCodificacao tipoCodificacao) {
+		super(nome, dataCriacao);
+		this.conteudo =  conteudo;
+		this.state = state;
+		this.tipoCodificacao = tipoCodificacao;
 	}
 
 	@Override
@@ -52,11 +63,16 @@ public class Arquivo extends AbstractEntrada implements EntradaOperavel{
 
 	@Override
 	public String dump(){
-		return this.conteudo;
-	};
+		return this.tipoCodificacao.encode(conteudo);
+	}
 
 	protected void setConteudo(String conteudo) {
 		this.conteudo = conteudo;
 	}
+	
+	public void setState(EstadoArquivoAbstract state) {
+		this.state = state;
+	}
+	
 
 }

@@ -3,12 +3,18 @@ package br.ifba.inf011.aval2.model.state;
 import java.time.LocalDate;
 import java.util.List;
 
+import br.ifba.inf011.aval2.model.Credencial;
 import br.ifba.inf011.aval2.model.Entrada;
 import br.ifba.inf011.aval2.model.EntradaOperavel;
 
+/* */
 public abstract class EstadoArquivoAbstract implements EntradaOperavel{
 	
-	private EntradaOperavel arquivo;
+	protected EntradaOperavel arquivo;
+	
+	protected EstadoArquivoAbstract(EntradaOperavel arquivo) {
+		this.arquivo = arquivo;
+	}
 	
 	public EntradaOperavel getArquivo() {
 		return arquivo;
@@ -47,5 +53,14 @@ public abstract class EstadoArquivoAbstract implements EntradaOperavel{
 	public String dump() {
 		return this.arquivo.dump();
 	}
+	
+	@Override
+	public abstract String ler(Credencial credencial) throws IllegalAccessException;
+
+	@Override
+	public abstract void escrever(Credencial credencial, String escrever) throws IllegalAccessException;
+
+	@Override
+	public abstract Long getTamanho() throws IllegalAccessException;
 
 }
