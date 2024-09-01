@@ -1,1 +1,16 @@
+# Ignorar todos os arquivos .class (arquivos compilados)
 *.class
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar diretórios de build comuns
+/bin/
+build/
+out/
+target/
+
+# Ignorar arquivos de configurações específicas do Eclipse
+/.settings/
+/.project
+.classpath
