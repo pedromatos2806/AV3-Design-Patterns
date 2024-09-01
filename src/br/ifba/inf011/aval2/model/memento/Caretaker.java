@@ -4,18 +4,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import br.ifba.inf011.aval2.model.ArquivoHistorico.ArquivoHistoricoMemento;
+
 public class Caretaker {
-	private List<Memento> mementos = new ArrayList<Memento>();
+	private List<ArquivoHistoricoMemento> mementos = new ArrayList<ArquivoHistoricoMemento>();
 	
-	public List<Memento> getHistoryList() {
+	public List<ArquivoHistoricoMemento> getHistoryList() {
 		return Collections.unmodifiableList(mementos);
 	}
 	
-	public void add(Memento memento) {
+	public void add(ArquivoHistoricoMemento memento) {
 		mementos.add(memento);
 	}
 	
-	public Memento get(int index) {
+	public ArquivoHistoricoMemento get(int index) {
 		return mementos.get(index);
 	}
 
