@@ -11,7 +11,7 @@ import br.ifba.inf011.aval2.model.state.Normal;
 
 public class Arquivo extends AbstractEntrada implements EntradaOperavel{
 	
-	private String conteudo;
+	protected String conteudo;
 	
 	private EstadoArquivoAbstract state;
 	
