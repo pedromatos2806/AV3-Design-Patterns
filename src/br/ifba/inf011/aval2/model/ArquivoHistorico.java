@@ -2,7 +2,7 @@ package br.ifba.inf011.aval2.model;
 
 import java.time.LocalDate;
 
-
+//Originator
 public class ArquivoHistorico extends Arquivo implements EntradaOperavel{
 
 
@@ -18,7 +18,7 @@ public class ArquivoHistorico extends Arquivo implements EntradaOperavel{
 		setConteudo(memento.getState());
 	}
 	
-	
+	//Memento
 	public static class ArquivoHistoricoMemento {
 		private String conteudoSalvo;
 
