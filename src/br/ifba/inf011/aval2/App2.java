@@ -121,6 +121,6 @@ public class App2 {
 	public static void main(String[] args) throws IllegalAccessException {
 		App2 app = new App2();
 		app.runStateTest();
-		//app.runBridgeTest();
+		app.runBridgeTest();
 	}
 }
