@@ -3,7 +3,8 @@ package br.ifba.inf011.aval2.model.state;
 import br.ifba.inf011.aval2.model.Arquivo;
 import br.ifba.inf011.aval2.model.Credencial;
 
-public class Bloqueado extends EstadoArquivoAbstract{
+//ConcreteStates
+public class Bloqueado extends EstadoArquivoAbstract {
 
 	public Bloqueado(Arquivo arquivo) {
 		super(arquivo);

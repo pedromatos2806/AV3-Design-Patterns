@@ -3,7 +3,8 @@ package br.ifba.inf011.aval2.model.state;
 import br.ifba.inf011.aval2.model.Arquivo;
 import br.ifba.inf011.aval2.model.Credencial;
 
-public class Normal extends EstadoArquivoAbstract{
+//ConcreteStates
+public class Normal extends EstadoArquivoAbstract {
 
 	public Normal(Arquivo arquivo) {
 		super(arquivo);

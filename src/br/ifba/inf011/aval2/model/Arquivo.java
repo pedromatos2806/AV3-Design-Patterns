@@ -9,6 +9,7 @@ import br.ifba.inf011.aval2.model.composite.AbstractEntrada;
 import br.ifba.inf011.aval2.model.state.EstadoArquivoAbstract;
 import br.ifba.inf011.aval2.model.state.Normal;
 
+//Abstraction
 public class Arquivo extends AbstractEntrada implements EntradaOperavel{
 	
 	protected String conteudo;
@@ -77,7 +78,8 @@ public class Arquivo extends AbstractEntrada implements EntradaOperavel{
 	public String getConteudo() {
 	    return this.conteudo;
 	}
-	
 
-
+	public Arquivo getArquivo () {
+		return this;
+	}
 }

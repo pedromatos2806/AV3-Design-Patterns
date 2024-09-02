@@ -1,5 +1,6 @@
 package br.ifba.inf011.aval2.model.brigde;
 
+//Concrete Implementation
 public class ConversorText implements TipoCodificacao{
 
 	@Override

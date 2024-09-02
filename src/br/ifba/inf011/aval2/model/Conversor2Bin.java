@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 
 import br.ifba.inf011.aval2.model.brigde.TipoCodificacao;
 
+//Concrete Implementation
 public class Conversor2Bin implements TipoCodificacao{
 	
 	public static int BIN_BLOCK_SIZE = 8;
