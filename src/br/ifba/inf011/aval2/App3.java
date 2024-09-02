@@ -3,6 +3,7 @@ package br.ifba.inf011.aval2;
 import java.time.LocalDate;
 
 import br.ifba.inf011.aval2.model.ArquivoHistorico;
+import br.ifba.inf011.aval2.model.ArquivoHistorico.ArquivoHistoricoMemento;
 import br.ifba.inf011.aval2.model.Credencial;
 import br.ifba.inf011.aval2.model.memento.Caretaker;
 
@@ -24,11 +25,11 @@ public class App3 {
 		leitura = historico.ler(new Credencial("1"));
 		System.out.println(leitura); 
 		
-		historico.restore(caretaker.get(0));
+		historico.restore((ArquivoHistoricoMemento) caretaker.get(0));
 		leitura = historico.ler(new Credencial("1"));
 		System.out.println(leitura);
 		
-		historico.restore(caretaker.get(1));
+		historico.restore((ArquivoHistoricoMemento) caretaker.get(1));
 		leitura = historico.ler(new Credencial("1"));
 		System.out.println(leitura);
 		
@@ -37,15 +38,15 @@ public class App3 {
 		leitura = historico.ler(new Credencial("1"));
 		System.out.println(leitura);
 		
-		historico.restore(caretaker.get(0));
+		historico.restore((ArquivoHistoricoMemento) caretaker.get(0));
 		leitura = historico.ler(new Credencial("1"));
 		System.out.println(leitura);
 		
-		historico.restore(caretaker.get(1));
+		historico.restore((ArquivoHistoricoMemento) caretaker.get(1));
 		leitura = historico.ler(new Credencial("1"));
 		System.out.println(leitura);
 		
-		historico.restore(caretaker.get(2));
+		historico.restore((ArquivoHistoricoMemento) caretaker.get(2));
 		leitura = historico.ler(new Credencial("1"));
 		System.out.println(leitura);
 		

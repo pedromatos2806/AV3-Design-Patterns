@@ -8,9 +8,9 @@ import br.ifba.inf011.aval2.model.ArquivoHistorico.ArquivoHistoricoMemento;
 
 //Caretaker
 public class Caretaker {
-	private List<ArquivoHistoricoMemento> mementos = new ArrayList<ArquivoHistoricoMemento>();
+	private List<Memento> mementos = new ArrayList<Memento>();
 	
-	public List<ArquivoHistoricoMemento> getHistoryList() {
+	public List<Memento> getHistoryList() {
 		return Collections.unmodifiableList(mementos);
 	}
 	
@@ -18,7 +18,7 @@ public class Caretaker {
 		mementos.add(memento);
 	}
 	
-	public ArquivoHistoricoMemento get(int index) {
+	public Memento get(int index) {
 		return mementos.get(index);
 	}
 
