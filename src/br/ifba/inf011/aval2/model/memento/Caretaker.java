@@ -6,7 +6,7 @@ import java.util.List;
 
 import br.ifba.inf011.aval2.model.ArquivoHistorico.ArquivoHistoricoMemento;
 
-//Caretaker
+//Caretaker em memento
 public class Caretaker {
 	private List<Memento> mementos = new ArrayList<Memento>();
 	

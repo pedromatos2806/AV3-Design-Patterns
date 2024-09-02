@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import br.ifba.inf011.aval2.model.memento.Memento;
 
-//Originator
+//Originator em memento
 public class ArquivoHistorico extends Arquivo implements EntradaOperavel{
 
 
@@ -20,7 +20,7 @@ public class ArquivoHistorico extends Arquivo implements EntradaOperavel{
 		setConteudo(memento.getState());
 	}
 	
-	//Memento
+	//Memento em memento
 	public static class ArquivoHistoricoMemento implements Memento {
 		private String conteudoSalvo;
 
