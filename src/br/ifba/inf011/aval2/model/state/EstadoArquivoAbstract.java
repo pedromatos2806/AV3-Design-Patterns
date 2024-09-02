@@ -55,13 +55,10 @@ public abstract class EstadoArquivoAbstract implements EntradaOperavel{
 		return this.arquivo.dump();
 	}
 	
-	@Override
 	public abstract String ler(Credencial credencial) throws IllegalAccessException;
 
-	@Override
 	public abstract void escrever(Credencial credencial, String escrever) throws IllegalAccessException;
 
-	@Override
 	public abstract Long getTamanho() throws IllegalAccessException;
 
 }
